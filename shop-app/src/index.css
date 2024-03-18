@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.splash-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background-color: antiquewhite;
+}
+
+.splash-screen h1 {
+  font-size: 34px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.splash-screen h3 {
+  margin: 0;
+  font-weight: 300;
+}
