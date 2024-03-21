@@ -41,6 +41,7 @@ code {
 .signup-form form {
   gap: 10px;
   display: grid;
+  min-width: 290px;
 }
 
 .splash-screen h1 {
