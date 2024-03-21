@@ -12,13 +12,35 @@ code {
     monospace;
 }
 
-.splash-screen {
+.splash-screen,.auth-screen,.verification-page {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   flex-direction: column;
   background-color: antiquewhite;
+  padding: 0 40%;
+}
+
+.dashboardWrapper {
+  background-color: antiquewhite;
+  height: 100vh;
+
+
+}
+
+.signup-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background-color: antiquewhite;
+}
+
+.signup-form form {
+  gap: 10px;
+  display: grid;
 }
 
 .splash-screen h1 {
@@ -31,3 +53,28 @@ code {
   margin: 0;
   font-weight: 300;
 }
+
+
+
+.auth-screen button {
+  border-radius: 0;
+  width: 100%;
+  margin-bottom: 10px;
+  /* max-width: 50%; */
+}
+
+.otpField {
+  padding-left: 15px;
+  letter-spacing: 42px;
+  border: 0;
+  background-image: linear-gradient(to left, black 70%, rgba(255, 255, 255, 0) 0);
+  background-position: bottom;
+  background-size: 50px 1px;
+  background-repeat: repeat-x;
+  background-position-x: 35px;
+  width: 140px;
+  outline : none;
+  margin-right: 0;
+  background-color: transparent;
+}
+
