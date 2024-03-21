@@ -24,7 +24,7 @@ code {
 
 .dashboardWrapper {
   background-color: antiquewhite;
-  height: 100vh;
+  /* height: 100vh; */
 
 
 }
@@ -79,3 +79,13 @@ code {
   background-color: transparent;
 }
 
+ .sliderBlock .imgBlock{
+  width: 100%;
+  object-fit: cover;
+  height: 450px;
+
+}
+
+.sliderBlock {
+  height: 450px;
+}

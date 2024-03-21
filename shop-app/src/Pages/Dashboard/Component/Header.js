@@ -8,10 +8,16 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+import ShopIcon from '@mui/icons-material/Shop';
+import CheckroomIcon from '@mui/icons-material/Checkroom';
 import MenuSharpIcon from '@mui/icons-material/MenuSharp';
+import CropFreeIcon from '@mui/icons-material/CropFree';
+import StyleIcon from '@mui/icons-material/Style';
+import DesignServicesIcon from '@mui/icons-material/DesignServices';
+import LocalOfferIcon from '@mui/icons-material/LocalOffer';
+import { CardGiftcardSharp } from '@mui/icons-material';
 import { Typography } from '@mui/material';
+
 
 export default function Header() {
   const [open, setOpen] = React.useState(false);
@@ -22,12 +28,19 @@ export default function Header() {
 
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
+      <Typography variant='h4' style={{paddingLeft: '20px'}}>LOGO</Typography>
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+        {['Shop', 'Clothing', 'Frames', 'Gift','Stationary', 'Cards','Deals'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {index % 7 === 0 ? <ShopIcon /> : 
+                index % 7 === 1 ? <CheckroomIcon /> : 
+                index % 7 === 2 ? <CropFreeIcon /> : 
+                index % 7 === 3 ? <CardGiftcardSharp /> : 
+                index % 7 === 4 ? <DesignServicesIcon /> : 
+                index % 7 === 5 ? <StyleIcon/> : <LocalOfferIcon />
+                 }
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
@@ -35,18 +48,7 @@ export default function Header() {
         ))}
       </List>
       <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
+      
     </Box>
   );
 

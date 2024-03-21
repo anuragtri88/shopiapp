@@ -16,28 +16,14 @@ function ControlledCarousel() {
 
   return (
     <Carousel activeIndex={index} onSelect={handleSelect}>
-      <Carousel.Item>
-        <Image src={DummyImg} alt="First slide" className='img-fluid' />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
+      <Carousel.Item className='sliderBlock'>
+        <Image src={DummyImg} alt="First slide" className='img-fluid imgBlock' />
       </Carousel.Item>
-      <Carousel.Item>
-        <Image src={DummyImg2} alt="Second slide" className='img-fluid' />
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
+      <Carousel.Item className='sliderBlock'>
+        <Image src={DummyImg2} alt="Second slide" className='img-fluid imgBlock' />
       </Carousel.Item>
-      <Carousel.Item>
-        <Image src={DummyImg3} alt="Third slide" className='img-fluid' />
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
+      <Carousel.Item className='sliderBlock'>
+        <Image src={DummyImg3} alt="Third slide" className='img-fluid imgBlock' />
       </Carousel.Item>
     </Carousel>
   );
