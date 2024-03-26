@@ -17,6 +17,7 @@ import DesignServicesIcon from '@mui/icons-material/DesignServices';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import { CardGiftcardSharp } from '@mui/icons-material';
 import { Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 
 export default function Header() {
@@ -32,7 +33,7 @@ export default function Header() {
       <List>
         {['Shop', 'Clothing', 'Frames', 'Gift','Stationary', 'Cards','Deals'].map((text, index) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton>
+            <ListItemButton component={Link} to={`/${text.toLowerCase()}`}>
               <ListItemIcon>
                 {index % 7 === 0 ? <ShopIcon /> : 
                 index % 7 === 1 ? <CheckroomIcon /> : 
